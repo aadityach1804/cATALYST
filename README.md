@@ -1,4 +1,3 @@
-Markdown
 # 🎵 Cadence Studio
 
 An intelligent, local-first songwriting studio and song deconstruction engine.
@@ -46,27 +45,3 @@ The app manages audio through this folder structure:
 ### 1. Start the Python Backend
 ```bash
 python backend/server.py
-2. Start the Desktop App
-Bash
-npx tauri dev
-📦 How to Build the Standalone Windows Installer (.exe)
-Bash
-npx tauri build
-The installer will be generated in:
-src-tauri/target/release/bundle/nsis/Cadence Studio_0.1.0_x64-setup.exe
-
-📄 Project Development History
-For the complete technical architecture and engineering record, see the Cadence Studio Development Transcript.
-
-📜 License
-MIT License
-
-
----
-
-After saving **`README.md`**, push it to GitHub with these 2 commands in PowerShell:
-
-```powershell
-git add README.md
-git commit -m "docs: update README with complete project overview"
-git push origin main
