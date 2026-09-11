@@ -1,7 +1,7 @@
-@'
-# 🎵 Cadence Studio (cATALYST)
+# 🎵 Cadence Studio
 
 An intelligent, local-first songwriting studio and song deconstruction engine.
+
 Built with **Tauri v2**, **React 19**, **Tone.js**, **Meta Demucs AI**, and **FastAPI**.
 
 ---
@@ -9,40 +9,39 @@ Built with **Tauri v2**, **React 19**, **Tone.js**, **Meta Demucs AI**, and **Fa
 ## 🌟 What This Software Does
 
 * **🎼 Lyric & Chord Studio**:
-  * 7th diatonic chords across all 12 roots and 4 modes (Major, Minor, Dorian, Mixolydian) with instant click-to-play synthesis.
+  * Calculates 7th diatonic chords in any Key and Mode (Major, Minor, Dorian, Mixolydian) with instant click-to-play sound.
   * Section cards (Verse, Chorus, Bridge) with syllable counters, chord lines, and progression looping.
   * Microphone vocal scratchpad recording directly into each section.
 
 * **🎛️ Arrangement Timeline & Multi-Track Studio**:
-  * Interactive wave-drawing canvas that pitch-quantizes melody curves to scale notes across octaves.
+  * Interactive wave canvas where you draw melody curves that snap to scale notes across octaves.
   * 16-step visual drum machine (Kick, Snare, Hi-Hat).
-  * 6 physical instrument models: Grand Piano, Nylon Guitar, Orchestral Strings, Woodwind Flute, Sub Bass, and Ambient Pad.
-  * Real-time DAW controls: Mute, Delete, and `+ Add Track` while audio is actively playing without stopping.
+  * 6 physical instruments: Grand Piano, Nylon Guitar, Orchestral Strings, Woodwind Flute, Sub Bass, and Ambient Pad.
+  * Real-time controls: Mute, Delete, and `+ Add Track` while audio is actively playing without stopping.
 
 * **🧠 Song Blueprint & Deconstruction Engine**:
-  * Automatic Key, BPM, and beat tracking using Librosa and Chroma STFT.
-  * Structural song segmentation mapping reference tracks into bar-snapped Intro, Verse, and Chorus blocks.
+  * Uses Librosa and Chroma STFT to automatically detect the **Key**, **BPM**, and **Beats** of any song.
+  * Analyzes song structure and segments reference tracks into **Intro, Verse 1, Chorus, Verse 2, Outro** with exact bar counts.
 
 * **🪓 AI Stem Isolation (Meta Demucs)**:
-  * Separates reference tracks into isolated Vocals and Instrumental stems in the background.
-  * In-browser audio decoding to visualize real acoustic waveforms on timeline lanes.
+  * Separates reference tracks into isolated **Vocals** and **Instrumental** stems locally on your PC.
+  * Decodes audio waveforms in the browser to visualize the real acoustic waveform across timeline lanes.
 
 ---
 
-## 📁 Directory Structure
+## 📁 Main Directory Layout
 
-* `main_directory/00_Inbox_New_Songs/` — Drop incoming songs here.
-* `main_directory/01_Vocal_Stem_Splits/` — AI separated stems (Vocals & Instrumental).
-* `main_directory/02_Instrument_Samples/` — Sliced audio samples.
-* `main_directory/05_Blueprints/` — Saved timeline arrangement JSON files.
+The app manages audio through this folder structure:
+
+* `00_Inbox_New_Songs/` — Drop commercial reference songs here.
+* `01_Vocal_Stem_Splits/` — AI separated stems (Vocals & Instrumental).
+* `02_Instrument_Samples/` — Exported audio sample clips.
+* `05_Blueprints/` — Saved arrangement timeline JSON files.
 
 ---
 
-## 🚀 Development Quick Start
+## 🚀 How to Run (Development)
 
+### 1. Start the Python Backend
 ```bash
-# 1. Start Python Backend
 python backend/server.py
-
-# 2. Start Desktop App
-npx tauri dev
