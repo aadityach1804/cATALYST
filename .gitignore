@@ -1,0 +1,31 @@
+# Dependencies (Never commit to Git)
+node_modules/
+
+# Build outputs & compiled bundles
+dist/
+build/
+*.spec
+
+# Tauri / Rust compiler cache & large binaries (>100MB)
+src-tauri/target/
+src-tauri/binaries/
+*.exe
+*.msi
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local audio files & generated stems (keeps repo fast and under 10MB)
+main_directory/00_Inbox_New_Songs/*
+!main_directory/00_Inbox_New_Songs/.gitkeep
+main_directory/01_Vocal_Stem_Splits/*
+!main_directory/01_Vocal_Stem_Splits/.gitkeep
+main_directory/02_Instrument_Samples/*
+!main_directory/02_Instrument_Samples/.gitkeep
+main_directory/05_Blueprints/*
+!main_directory/05_Blueprints/.gitkeep
+
+# Local editor settings
+.vscode/
+.idea/
