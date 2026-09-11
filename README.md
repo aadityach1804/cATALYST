@@ -36,3 +36,27 @@
 ---
 
 ## 🏗️ System Architecture
+[ User Upload / Inbox ]
+│
+├──► Local Python Backend (FastAPI / Port 8000)
+│       ├── Meta HTDemucs AI (2-Stem & 4-Stem Separation)
+│       ├── Librosa (BPM, Beat Grid, Chroma Key Profiling)
+│       └── Streaming Media Server (HTTP Range / Partial Content)
+│
+└──► Native Desktop Client (Tauri v2 + React 19)
+├── Tone.js & Web Audio API (Live Audio Synthesis)
+├── Tonal.js (Music Theory Engine)
+└── HTML5 Canvas & SVG Waveforms
+
+---
+
+## 🚀 Quick Start (Development)
+
+### Prerequisites
+* [Node.js](https://nodejs.org) (v20+)
+* [Python](https://python.org) (3.11+) with `ffmpeg` installed
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/aadityach1804/cATALYST.git](https://github.com/aadityach1804/cATALYST.git)
+cd cATALYST
